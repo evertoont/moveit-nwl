@@ -1,34 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <a href="https://github.com/evertoont/moveit-nwl">
+    <img alt="Move.it Logo" src="./public/logo-full.svg" />
+  </a>
+</h1>
 
-## Getting Started
+<p align="center">Move.it é um projeto criado pela Rocketseat inicialmente para ser uma plataforma que combina a técnica do pomodoro, que consiste em ciclos alternados de foco e descanso, com exercícios de bem-estar para o corpo e a visão de quem passa muitas horas em frente a um computador, que pode ser prejudicial à saúde quando você não faz exercícios ou descansa!</p>
 
-First, run the development server:
+<p align="center">
+  <a href="https://github.com/evertoont">
+    <img alt="Made by Everton Reis" src="https://img.shields.io/badge/made%20by-Everton%20Oliver-blue">
+  </a>
 
-```bash
-npm run dev
-# or
-yarn dev
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361?color=blue">
+</p>
+
+<!-- Adicionar imagens do proejto -->
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/55769021/109574228-556d2500-7ace-11eb-890a-ac7a9da92ead.png" width="45%" />
+  <img src="https://user-images.githubusercontent.com/55769021/109574233-569e5200-7ace-11eb-9149-63c9ef518660.png" width="45%" />
+  <img src="https://user-images.githubusercontent.com/55769021/109574236-5736e880-7ace-11eb-8d6a-a75e10fc03b8.png" width="45%" />
+  <img src="https://user-images.githubusercontent.com/55769021/109574234-569e5200-7ace-11eb-8c47-576cc6410dd1.png" width="45%" />
+</p>
+
+---
+
+## 🧪 Tecnologias
+
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 🚀 Iniciando o projeto
+
+- Clone este repositório em sua máquina local usando:
+
+```
+https://github.com/evertoont/moveit-nwl
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Setup
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Instale as dependências do projeto;
+  - ```javascript
+    yarn install
+    // or
+    npm install
+    ```
+- Executar projeto em modo de desenvolvimento;
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  - ```javascript
+    yarn dev
+    // or
+    npm run dev
+    ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-## Learn More
+## 📝 License
 
-To learn more about Next.js, take a look at the following resources:
+<img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361?color=blue">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto está licenciado sob a Licença MIT - consulte a [LICENSE](LICENSE) para obter mais informações.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+<p align="center">Made with 💜 by Everton Reis</p>
