@@ -31,10 +31,7 @@ interface ChallengesProviderProps {
 
 export const ChallengeContext = createContext({} as ChallengeContextData);
 
-export function ChallengesProvider({
-  children,
-  ...rest
-}: ChallengesProviderProps) {
+export const ChallengesProvider: React.FC = ({  children,  ...rest}: ChallengesProviderProps) => {
   const [level, setLevel] = useState(rest.level ?? 1);
   const [currentExperience, setcurrentExperience] = useState(
     rest.currentExperience ?? 0
