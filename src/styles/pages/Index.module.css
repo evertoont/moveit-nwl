@@ -10,8 +10,26 @@
 }
 
 .container section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  gap: 2rem;
+}
+.container .LogoSymbol {
+  width: 768px;
+  height: 660px;
+  left: -68px;
+  top: 80px;
+}
+
+.container .Gitlogin {
   display: flex;
   flex-direction: column;
+}
+
+.container .Gitlogin img {
+  width: 360px;
+  height: 76px;
 }
 
 .container section strong {
@@ -35,7 +53,7 @@
   margin-left: 1rem;
   font-size: 1.4rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--text-highlight);
 }
 
 .container form {
@@ -53,14 +71,14 @@
 }
 
 .container form input::placeholder {
-  color: rgba(255, 255, 255, 0.67);
+  color: var(--text-highlight);
 }
 
 .container form button {
   display: flex;
   align-items: center;
   font-size: 2rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
   border: 0;
   border-radius: 4px;
   outline: none;
