@@ -1,9 +1,20 @@
-import React from "react";
-import { FiArrowRight} from "react-icons/fi";
-import {AiFillGithub} from "react-icons/ai"
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { FiArrowRight } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 import style from "../styles/pages/Index.module.css";
 
 export default function Index() {
+  const { push } = useRouter();
+  const [username, setUsername] = useState("");
+
+  function handleUsername(e) {
+    e.preventDefault();
+    if (username) {
+      push(`/${username}`);
+    }
+  }
+
   return (
     <div className={style.container}>
       <section>
@@ -21,8 +32,13 @@ export default function Index() {
             <span>Faça login com seu Github para começar</span>
           </div>
 
-          <form>
-            <input type="text" placeholder="Digite seu username" />
+          <form onSubmit={handleUsername}>
+            <input
+              type="text"
+              placeholder="Digite seu username"
+              value={username}
+              onChange={(nameUser) => setUsername(nameUser.target.value)}
+            />
             <button type="submit">
               {" "}
               <FiArrowRight />{" "}

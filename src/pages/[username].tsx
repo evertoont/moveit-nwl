@@ -11,17 +11,23 @@ import styles from "../styles/pages/Home.module.css";
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengeContext";
 
+interface UserGithub {
+  name: string;
+  avatar_url: string;
+}
+
 interface HomeProps {
+  user: UserGithub;
   level: number;
   currentExperience: number;
   challengesCompleted: number;
 }
 
 export default function Home(props: HomeProps) {
+  const { user } = props;
+
   return (
-    <ChallengesProvider
-      {...props}
-    >
+    <ChallengesProvider {...props}>
       <div className={styles.container}>
         <Head>
           <title>Inicio | move.it</title>
@@ -32,7 +38,7 @@ export default function Home(props: HomeProps) {
         <CountdownProvider>
           <section>
             <div>
-              <Profile />
+              <Profile {...user} />
               <CompletedChallenges />
               <Countdown />
             </div>
@@ -48,10 +54,15 @@ export default function Home(props: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { username } = ctx.params;
+  const response = await fetch(`https://api.github.com/users/${username}`);
+  const user = await response.json();
+
   const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
 
   return {
     props: {
+      user,
       level: Number(level),
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted),
