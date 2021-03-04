@@ -1,62 +1,66 @@
-import Head from "next/head";
-import { GetServerSideProps } from "next";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { FiArrowRight } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
+import style from "../styles/pages/Index.module.css";
+import { ModalErrorLogin } from "../components/ModalErrorLogin";
 
-import { CompletedChallenges } from "../components/CompletedChallenges";
-import { Countdown } from "../components/Countdown";
-import { ExperienceBar } from "../components/ExperienceBar";
-import { Profile } from "../components/Profile";
-import { ChallengeBox } from "../components/ChallengeBox";
+export default function Index() {
+  const { push } = useRouter();
+  const [username, setUsername] = useState("");
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
-import styles from "../styles/pages/Home.module.css";
-import { CountdownProvider } from "../contexts/CountdownContext";
-import { ChallengesProvider } from "../contexts/ChallengeContext";
+  async function handleUsername(e) {
+    e.preventDefault();
 
-interface HomeProps {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
-}
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    const user = await response.json();
 
-export default function Home(props: HomeProps) {
+    if (user.message != "Not Found") {
+      push(`/${username}`);
+    } else {
+      setIsOpenModal(true);
+    }
+  }
+  
+  function closeModal() {
+    setIsOpenModal(false)
+  }
+
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Inicio | move.it</title>
-        </Head>
+    <>
+      {isOpenModal && <ModalErrorLogin close={closeModal}/>}
+      <div className={style.container}>
+        <section>
+          <div className={style.LogoSymbol}>
+            <img src="symbol.svg" alt="Simbolo Moveit" />
+          </div>
 
-        <ExperienceBar />
+          <div className={style.Gitlogin}>
+            <img src="white-logo-full.svg" alt="Logo" />
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
+            <strong>Bem-vindo</strong>
+
+            <div className={style.titleContainer}>
+              <AiFillGithub size={55} />
+              <span>Faça login com seu Github para começar</span>
             </div>
 
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
+            <form onSubmit={handleUsername}>
+              <input
+                type="text"
+                placeholder="Digite seu username"
+                value={username}
+                onChange={(nameUser) => setUsername(nameUser.target.value)}
+              />
+              <button type="submit">
+                {" "}
+                <FiArrowRight />{" "}
+              </button>
+            </form>
+          </div>
+        </section>
       </div>
-    </ChallengesProvider>
+    </>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted),
-    },
-  };
-};

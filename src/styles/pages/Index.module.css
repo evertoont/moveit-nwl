@@ -1,0 +1,88 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--blue);
+}
+
+.container section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  gap: 2rem;
+}
+.container .LogoSymbol {
+  width: 768px;
+  height: 660px;
+  left: -68px;
+  top: 80px;
+}
+
+.container .Gitlogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .Gitlogin img {
+  width: 360px;
+  height: 76px;
+}
+
+.container section strong {
+  margin-top: 6rem;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.container .titleContainer {
+  display: flex;
+  margin: 3rem 0;
+}
+
+.container .titleContainer svg {
+  color: var(--white);
+}
+
+.container .titleContainer span {
+  max-width: 300px;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-highlight);
+}
+
+.container form {
+  display: flex;
+}
+
+.container form input {
+  background: linear-gradient(90deg, var(--blue-dark), transparent);
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: var(--white);
+  border: 0;
+  outline: none;
+}
+
+.container form input::placeholder {
+  color: var(--text-highlight);
+}
+
+.container form button {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.8rem;
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  background: var(--green);
+  color: var(--white);
+}
