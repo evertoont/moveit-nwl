@@ -1,10 +1,12 @@
 import { useContext } from "react";
+import Link from 'next/link';
+import { FiLogOut } from "react-icons/fi";
 import { ChallengeContext } from "../contexts/ChallengeContext";
 import styles from "../styles/components/Profile.module.css";
 
 interface UserGithub {
-  name: string
-  avatar_url: string
+  name: string;
+  avatar_url: string;
 }
 
 export function Profile(user: UserGithub) {
@@ -20,6 +22,9 @@ export function Profile(user: UserGithub) {
           Level {level}
         </p>
       </div>
+      <Link href="/">
+        <FiLogOut size={30} />
+      </Link>
     </div>
   );
 }
