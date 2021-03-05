@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/evertoont">
-    <img alt="Made by Everton Reis" src="https://img.shields.io/badge/made%20by-Everton%20Oliver-blue">
+    <img alt="Made by Everton Reis" src="https://img.shields.io/badge/made%20by-Everton%20Reis-blue">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361?color=blue">
@@ -16,10 +16,8 @@
 
 <!-- Adicionar imagens do proejto -->
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/55769021/109574228-556d2500-7ace-11eb-890a-ac7a9da92ead.png" width="45%" />
-  <img src="https://user-images.githubusercontent.com/55769021/109574233-569e5200-7ace-11eb-9149-63c9ef518660.png" width="45%" />
-  <img src="https://user-images.githubusercontent.com/55769021/109574236-5736e880-7ace-11eb-8d6a-a75e10fc03b8.png" width="45%" />
-  <img src="https://user-images.githubusercontent.com/55769021/109574234-569e5200-7ace-11eb-8c47-576cc6410dd1.png" width="45%" />
+  <img src="https://user-images.githubusercontent.com/55769021/110042404-7e86f300-7d24-11eb-96b1-5c59b8b77ac1.png" width="45%" />
+  <img src="https://user-images.githubusercontent.com/55769021/110063476-fca9c080-7d49-11eb-87ea-e0bef3ee3538.png" width="45%" />
 </p>
 
 ---
