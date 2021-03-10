@@ -104,11 +104,28 @@
   background: var(--green);
 }
 
-.challengeBoxActive footer button:hover{
-    filter: brightness(0.9);
+.challengeBoxActive footer button:hover {
+  filter: brightness(0.9);
 }
 
-.challengeBoxActive footer button:focus{
+.challengeBoxActive footer button:focus {
   outline: none;
 }
 
+@media (max-width: 900px) {
+  .challengeBoxContainer {
+    margin-bottom: 8rem;
+  }
+
+  .challengeBoxNotActive p {
+    font-size: 1.2rem;
+  }
+
+  .challengeBoxNotActive p img {
+    margin-bottom: 1.5rem;
+  }
+
+  .challengeBoxActive p {
+    font-size: 1.15rem;
+  }
+}

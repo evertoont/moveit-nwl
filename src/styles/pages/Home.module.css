@@ -8,10 +8,22 @@
   flex-direction: column;
 }
 
-.container section{
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6.25rem;
-    align-content: center;
+.container section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-content: center;
+}
+
+@media (max-width: 900px) {
+  .container section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .container section .countdown {
+    margin-top: 3.5rem;
+  }
 }
