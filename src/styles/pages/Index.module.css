@@ -13,8 +13,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-content: center;
-  gap: 2rem;
+  gap: 6rem;
 }
+
 .container .LogoSymbol {
   width: 768px;
   height: 660px;
@@ -85,4 +86,21 @@
   cursor: pointer;
   background: var(--green);
   color: var(--white);
+}
+
+@media (max-width: 1400px) {
+  .container section {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1210px) {
+  .container section {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .container .LogoSymbol {
+    display: none;
+  }
 }
