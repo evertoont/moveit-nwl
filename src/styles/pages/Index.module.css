@@ -104,3 +104,37 @@
     display: none;
   }
 }
+
+@media (max-width: 360px) {
+  .container .Gitlogin img {
+    width: 326px;
+  }
+
+  .container form button {
+    padding: 0.6rem;
+  }
+
+  .container form input {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container .Gitlogin img {
+    width: 280px;
+  }
+  .container form input {
+    padding: 0.7rem;
+    width: 245px;
+  }
+
+  .container form button {
+    padding: 0.3rem;
+  }
+}
+
+@media (min-width: 375px) {
+  .container .Gitlogin img {
+    width: 340px;
+  }
+}
