@@ -65,4 +65,4 @@ git clone https://github.com/evertoont/moveit-nwl
 Este projeto está licenciado sob a Licença MIT - consulte a [LICENSE](LICENSE) para obter mais informações.
 
 ---
-<p align="center">Made with 💜 by Everton Reis</p>
+<p align="center">Made with 💜 by  <a href="https://www.linkedin.com/in/evertoont/">Everton Reis</a></p>
