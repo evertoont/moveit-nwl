@@ -36,21 +36,21 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - Clone este repositório em sua máquina local usando:
 
-```
+```bash
 git clone https://github.com/evertoont/moveit-nwl
 ```
 
 #### Setup
 
 - Instale as dependências do projeto;
-  - ```javascript
+  - ```bash
     yarn install
     // or
     npm install
     ```
 - Executar projeto em modo de desenvolvimento;
 
-  - ```javascript
+  - ```bash
     yarn dev
     // or
     npm run dev
