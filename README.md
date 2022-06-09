@@ -4,7 +4,7 @@
   </a>
 </h1>
 
-<p align="center">Move.it é um projeto criado pela Rocketseat inicialmente para ser uma plataforma que combina a técnica do pomodoro, que consiste em ciclos alternados de foco e descanso, com exercícios de bem-estar para o corpo e a visão de quem passa muitas horas em frente a um computador, que pode ser prejudicial à saúde quando você não faz exercícios ou descansa!</p>
+<p align="center">Move.it é um projeto criado pela Rocketseat inicialmente para ser uma plataforma que combina a técnica do pomodoro, com exercícios de bem-estar para o corpo e a visão de quem passa muitas horas em frente a um computador, que pode ser prejudicial à saúde quando você não faz exercícios ou descansa!</p>
 
 <p align="center">
   <a href="https://github.com/evertoont">
